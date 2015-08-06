@@ -44,7 +44,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dynamic_preferences',
+    'ckeditor',
     'loosecms',
+    'loosecms_text',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -110,3 +112,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Standard',
+        'height': 'auto',
+        'width': 'auto',
+    }
+}
+
+CKEDITOR_UPLOAD_PATH = 'images/'
