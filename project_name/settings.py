@@ -47,6 +47,10 @@ INSTALLED_APPS = (
     'ckeditor',
     'loosecms',
     'loosecms_text',
+    'loosecms_article',
+    'loosecms_doc',
+    'loosecms_cas',
+    'loosecms_menu'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -73,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'loosecms.context_processors.global_settings',
             ],
         },
     },
@@ -124,3 +129,7 @@ CKEDITOR_CONFIGS = {
 }
 
 CKEDITOR_UPLOAD_PATH = 'images/'
+
+LOOSECMS_SITE_NAME = 'My Site'
+
+LOOSECMS_SITE_FAVICON = 'images/favicon.ico'
