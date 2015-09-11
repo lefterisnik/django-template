@@ -4,3 +4,7 @@
 -e git+http://github.com/lefterisnik/django-loosecms-doc/#egg=django-loosecms-doc
 -e git+http://github.com/lefterisnik/django-loosecms-menu/#egg=django-loosecms-menu
 -e git+http://github.com/lefterisnik/django-loosecms-cas/#egg=django-loosecms-cas
+-e git+http://github.com/lefterisnik/django-loosecms-search/#egg=django-loosecms-search
+-e git+http://github.com/lefterisnik/django-loosecms-rss/#egg=django-loosecms-rss
+-e git+http://github.com/lefterisnik/django-loosecms-link/#egg=django-loosecms-link
+-e git+http://github.com/lefterisnik/django-loosecms-dynamo/#egg=django-loosecms-dynamo

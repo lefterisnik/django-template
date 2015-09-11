@@ -11,15 +11,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-from django.utils.crypto import get_random_string
 import os
 
-# Create a random SECRET_KEY hash to put it in the main settings.
-chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
-SECRET_KEY = get_random_string(50, chars)
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -43,13 +37,21 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'ckeditor',
+    'ckeditor_uploader',
+    'haystack',
     'loosecms',
+    'loosecms.apps.LooseCMSSiteConfig',
+    'loosecms_cas',
     'loosecms_text',
     'loosecms_article',
     'loosecms_doc',
-    'loosecms_cas',
-    'loosecms_menu'
+    'loosecms_menu',
+    'loosecms_search',
+    'loosecms_rss',
+    'loosecms_link',
+    'loosecms_dynamo',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -119,16 +121,4 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'Standard',
-        'height': 'auto',
-        'width': 'auto',
-    }
-}
-
 CKEDITOR_UPLOAD_PATH = 'images/'
-
-LOOSECMS_SITE_NAME = 'My Site'
-
-LOOSECMS_SITE_FAVICON = 'images/favicon.ico'
