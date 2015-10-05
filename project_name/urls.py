@@ -13,8 +13,13 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+from django.contrib import admin
 from django.conf.urls import include, url
+from loosecms.conf.urls.i18n import simple_i18n_patterns
 
-urlpatterns = [
+urlpatterns = simple_i18n_patterns(
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('loosecms.urls')),
-]
+)
+
+handler404 = 'loosecms.views.error404'
