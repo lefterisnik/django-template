@@ -8,3 +8,4 @@
 -e git+http://github.com/lefterisnik/django-loosecms-rss/#egg=django-loosecms-rss
 -e git+http://github.com/lefterisnik/django-loosecms-link/#egg=django-loosecms-link
 -e git+http://github.com/lefterisnik/django-loosecms-dynamo/#egg=django-loosecms-dynamo
+-e git+http://github.com/lefterisnik/django-loosecms-style/#egg=django-loosecms-style
